@@ -1,0 +1,14 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+#search{
+    margin-bottom: 40px;
+    max-width: 30%;
+    margin-left: 35%;
+}

@@ -1,9 +1,21 @@
 import "./App.css";
 import "./bootstrap.min.css";
-import Navbar from "./components/navbar";
+import Home from "./Home";
+import Contact from "./contactUs";
+import About from "./about";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  return <Navbar />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ContactUs" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
