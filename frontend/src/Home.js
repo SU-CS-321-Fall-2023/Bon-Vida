@@ -1,20 +1,26 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import SearchBar from "./components/searchbar";
-
+import { useState } from "react";
+// currently adding functionality that will allow for search filtering 
 function Home() {
+  const [searchInput, setSearchInput]=useState("");
   const elements = [
-    "Element 1",
-    "Element 2",
-    "Element 3",
-    "Element 4",
-    "Element 5",
-    "Element 6",
+    "Injury 1",
+    "Injury 2",
+    "Injury 3",
+    "Injury 4",
+    "injury 5",
+    "Injury 6",
   ];
+  const filteredElements = elements.filter((element) => element.toLowerCase().includes(searchInput.toLowerCase()));
   return (
     <>
       <Navbar />
-      <SearchBar />
+      <SearchBar
+      value = {searchInput}
+      onChange ={(e)=> setSearchInput(e.target.value)}
+      />
       <div className="grid">
         {elements.map((element, index) => (
           <button
