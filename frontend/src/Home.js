@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import SearchBar from "./components/searchbar";
 import axios from "axios";
-import Modal from "./components/modal";
+//import Modal from "./components/modal";
 // currently adding functionality that will allow for search filtering
 function Home() {
   const [injuries, setInjuries] = useState([]);
+ 
   // const [isComponentVisible, setIsComponentVisible] = useState(false);
 
   // Function to show/hide the component
@@ -34,7 +35,7 @@ function Home() {
 
   const handleSearch = (query) => {
     const filteredResults = injuries.filter((item) =>
-      item.toLowerCase().includes(query.toLowerCase())
+      item.injury.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredElements(filteredResults);
   };
@@ -51,7 +52,7 @@ function Home() {
       <Navbar />
       <SearchBar onSearch={handleSearch} />
       <div className="grid">
-        {injuries.map((injury, index) => (
+        {filteredElements.map((injury, index) => (
           <button
             className="btn btn-lg btn-primary"
             type="button"
