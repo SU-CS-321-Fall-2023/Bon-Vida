@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Navbar from "./components/navbar";
 import SearchBar from "./components/searchbar";
 // currently adding functionality that will allow for search filtering 
@@ -29,13 +29,6 @@ function Home() {
     );
     setFilteredElements(filteredResults);
   };
-  /*const [iframeContent, setIframecontent] = useState(null);
-  const loadIframeContent = (element)=>
-  {
-    const customText = 'Instructions for injury...'
-    setIframecontent(textcontent);
-  };
-*/
   return (
     <>
       <Navbar />
@@ -48,7 +41,6 @@ function Home() {
             key={index}
             style={{ height: "75px" }}
             onClick={()=> openPopup(element)}
-            //onClick={() => loadIframeContent}
           >
             {element}
           </button>
