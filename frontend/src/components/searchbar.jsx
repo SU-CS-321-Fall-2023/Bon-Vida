@@ -1,11 +1,21 @@
-import React from "react";
+import React,{useState} from "react";
 import "../bootstrap.min.css";
-import { useState } from "react";
+export default function SearchBar({onSearch}){
+    const[query,setQuery] = useState("");
 
-export default function SearchBar(){
+    const handleinputChange = (event) =>
+    {
+        const newQuery = event.target.value;
+        setQuery(newQuery);
+        onSearch(newQuery);
+    }
+    const handleSubmit = (event)=>
+    {
+        event.preventDefault();
+    }
     return(
-        <form className="d-flex" id="search">
-            <input className="form-control me-sm-2" type="search" placeholder="Search"/>
+        <form className="d-flex" id="search" onSubmit={handleSubmit}>
+            <input className="form-control me-sm-2" type="search" placeholder="Search" value={query} onChange={handleinputChange}/>
             <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
 
