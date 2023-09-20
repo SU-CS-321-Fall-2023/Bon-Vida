@@ -12,8 +12,8 @@ export default function Modal()
           <span aria-hidden="true"></span>
           </button>
         </div>
-        <div class="modal-body">
-        <p>Injury text possibly goes here</p>
+        <div className="modal-body">
+        <p>Modal body text goes here.</p>
         </div>
         <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
