@@ -1,99 +1,78 @@
 {
-    "Severe Bleeding": {
+    "Checking an Injured or Ill Adult": {
       "Dos": [
-        "Apply direct pressure to the wound with a clean cloth or bandage.",
-        "Elevate the injured area if possible, unless it's a bone injury.",
-        "Use a tourniquet only as a last resort if bleeding cannot be controlled by other means.",
-        "Keep the person lying down to prevent shock."
+        "1. CHECK FOR RESPONSIVENESS: Tap the shoulder and shout, Are you OK?", 
+        "2. IF NO RESPONSE, CALL 9-1-1 OR THE LOCAL EMERGENCY NUMBER AND SEND SOMEONE TO GET AN AED: If an unconscious person is face-down, roll him or her face-up keeping the head, neck and back in a straight line. If the person responds, obtain consent and call 9-1-1 or local emergency number for any life-threatening conditions. Check the responsive person from head-to-toe and ask questions to find out what happened.",
+        "3. OPEN THE AIRWAY: Tilt head; lift chin.",
+        "4. CHECK FOR BREAThHING: Check for no more than 10 seconds. Occasional gasps are not breathing.",
+        "5. QUICKlY SCAN FOR SEVERE BlEEDING: If there is no breathing, perform CPR or use an AED if an AED is immediately available. If breathing, maintain an open airway and monitor breathing and for any changes in condition."
       ],
       "Donts": [
-        "Do not remove a lodged object if it caused the bleeding; stabilize the object and seek medical help.",
-        "Avoid using a tourniquet unless absolutely necessary, as it can cause complications."
+       
       ]
     },
-    "Cardiac Arrest": {
+    "ConsciousChoking: Cannot Cough, Speak or breathe": {
       "Dos": [
-        "Call 911 (or the emergency number in your region) immediately.",
-        "Initiate CPR with chest compressions and rescue breaths."
+        "1. GIVE 5 BACK BlOWS: Bend the person forward at the waist and give 5 back blows between the shoulder blades with the heel of one hand.",
+        "2. GIVE 5 ABDOMINAL THRUSTS: Place a fist with the thumb side against the middle of the person’s abdomen, just above the navel. Cover your fist with the other hand. Give 5 quick, upward abdominal thrusts.",
+        "3. CONTINUE CARE: Give sets of 5 back blows and 5 abdominal thrusts until the object is forced out, the person can cough forcefully or breathe, or the person becomes unconscious."
       ],
       "Donts": [
-        "Do not delay calling for professional medical assistance."
+      
       ]
     },
-    "Choking": {
+    "Controlling External Bleeding ": {
       "Dos": [
-        "Perform the Heimlich maneuver or back blows to dislodge the obstructing object.",
-        "Encourage the victim to cough forcefully if they can."
+        "1. Cover the wound with a sterile dressing.",
+        "2. Apply direct pressure until breeding stops.",
+        "3. COVER THE DRESSING WITH A BAND AID: Check for circulation (feeling, warmth and color) beyond the injury.",
+        "4. IF BLEEDING DOES NOT STOP CALL 9-1-1 AND APPLY MORE PRESSURE: Add more dressings and bandages and apply additional pressure. Take steps to minimize shock. Wash hands with soap and water after giving care."
       ],
       "Donts": [
-        "Avoid using excessive force during the Heimlich maneuver, which may cause injury."
-      ]
-    },
-    "Severe Allergic Reactions": {
-      "Dos": [
-        "Administer epinephrine (if available) as prescribed.",
-        "Call 911 immediately.",
-        "Help the person to lie down and elevate their legs to improve blood flow."
-      ],
-      "Donts": [
-        "Do not wait to see if symptoms improve on their own."
-      ]
-    },
-    "Head Injuries": {
-      "Dos": [
-        "Keep the person still and support their head and neck to prevent movement.",
-        "Apply a clean cloth or bandage to any bleeding head wounds."
-      ],
-      "Donts": [
-        "Avoid moving the person unnecessarily, especially if there is a suspicion of spinal injury."
-      ]
-    },
-    "Spinal Cord Injuries": {
-      "Dos": [
-        "Immobilize the spine by keeping the person still and supporting the head and neck.",
-        "Call 911 and wait for professional medical assistance."
-      ],
-      "Donts": [
-        "Avoid attempting to realign the spine or move the person without proper training."
-      ]
-    },
-    "Electric Shock": {
-      "Dos": [
-        "Turn off the power source or disconnect the victim from the electrical source if safe to do so.",
-        "Call 911 immediately.",
-        "Administer CPR if the person is unresponsive."
-      ],
-      "Donts": [
-        "Do not touch the person if they are still in contact with the electrical source."
+        
       ]
     },
     "Burns": {
       "Dos": [
-        "Cool the burn with running cold water for at least 10 minutes.",
-        "Cover the burn with a clean, non-stick bandage or cloth.",
-        "Seek medical attention for deep burns or burns affecting the airway."
+        "1. Remove person from source of burn.",
+        "2. COOL THE BURN: Cool the burn with cool running water at least until pain is relieved.",
+        "3. Cover losely with sterile dressing.",
+        "4. IF THE BURN IS SEVERE CALL 9-1-1: Call 9-1-1 or the local emergency number if any other life-threatening conditions are found.",
+        "5. Care for shock."
       ],
       "Donts": [
-        "Avoid using ice or very cold water, as it may further damage the tissue."
+        
       ]
     },
-    "Drowning": {
+    "Poisoning": {
       "Dos": [
-        "Perform rescue and remove the person from the water if safe to do so.",
-        "Initiate CPR if the person is unresponsive and not breathing."
+        "1. CALL 9-1-1 OR THE POISON CONTROL HELPLINE: For life-threatening conditions (person is unconscious or not breathing, or level of consciousness changes), call 9-1-1 or the local emergency number. If the person is conscious and alert, call the National Poison Control Center hotline at 1-800-222-1222 and follow the advice given.",
+        "2. PROVIDE CARE BASED ON CONDITION FOUND: Do not induce vomiting or give the person anything to eat or drink unless medical professionals tell you to do so."
       ],
       "Donts": [
-        "Do not delay rescue efforts or CPR if needed."
+        
       ]
     },
-    "Broken Bones with Complications": {
+    "Head, Neck or Spinal Injuries": {
       "Dos": [
-        "Immobilize the injured area to prevent further movement.",
-        "Apply a splint or padding to stabilize the broken bone.",
-        "Seek professional medical attention."
+        "1. Call 9-1-1 or the local emergency number.",
+        "2. Minimize movement of the head, neck and spine.",
+        "3. STABILIZE HEAD IN THE POSITION FOUND: Provide support by placing your hands on both sides of the person’s head. If the head is sharply turned to one side, DO NOT move it."
       ],
       "Donts": [
-        "Avoid attempting to realign the bone unless you are trained to do so."
+        
+      ]
+    },
+    "Stroke": {
+      "Dos": [
+        "1. For a stroke, think F.A.S.T",
+        "FACE: Ask the person to smile. Does one side of the face droop?.",
+        "ARM: Ask the person to raise both arms. Does one arm drift downward?",
+        "SPEECH: Ask the person to repeat a simple sentence (such as, “The sky is blue.”). Is speech slurred? Can the person repeat the sentence correctly?",
+        "TIME: Try to determine when the signals began. Call 9-1-1 immediately. Report the time of onset to EMS personnel."
+      ],
+      "Donts": [
+        
       ]
     }
   }
