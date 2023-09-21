@@ -1,5 +1,5 @@
 {
-    "Checking an Injured or Ill Adult": {
+    "Checking an Injured or ill Adult": {
       "Dos": [
         "1. CHECK FOR RESPONSIVENESS: Tap the shoulder and shout, Are you OK?", 
         "2. IF NO RESPONSE, CALL 9-1-1 OR THE LOCAL EMERGENCY NUMBER AND SEND SOMEONE TO GET AN AED: If an unconscious person is face-down, roll him or her face-up keeping the head, neck and back in a straight line. If the person responds, obtain consent and call 9-1-1 or local emergency number for any life-threatening conditions. Check the responsive person from head-to-toe and ask questions to find out what happened.",
@@ -11,7 +11,7 @@
        
       ]
     },
-    "ConsciousChoking: Cannot Cough, Speak or breathe": {
+    "ConsciousChoking: Cannot Cough, Speak or Breathe": {
       "Dos": [
         "1. GIVE 5 BACK BlOWS: Bend the person forward at the waist and give 5 back blows between the shoulder blades with the heel of one hand.",
         "2. GIVE 5 ABDOMINAL THRUSTS: Place a fist with the thumb side against the middle of the person’s abdomen, just above the navel. Cover your fist with the other hand. Give 5 quick, upward abdominal thrusts.",
@@ -73,6 +73,34 @@
       ],
       "Donts": [
         
+      ]
+    },
+    "First aid for any type of seizure": {
+      "Dos:": [
+        "Stay with the person until the seizure ends and he or she is fully awake. After it ends, help the person sit in a safe place. Once they are alert and able to communicate, tell them what happened in very simple terms.",
+        "Comfort the person and speak calmly.",
+        "Check to see if the person is wearing a medical bracelet or other emergency information.",
+        "Keep yourself and other people calm.",
+        "Offer to call a taxi or another person to make sure the person gets home safely."
+      ],
+      "Donts":[
+        "Knowing what NOT to do is important for keeping a person safe during or after a seizure.",
+        "1. Do not hold the person down or try to stop his or her movements.",
+        "2. Do not put anything in the person’s mouth. This can injure teeth or the jaw. A person having a seizure cannot swallow his or her tongue.",
+        "3. Do not try to give mouth-to-mouth breaths (like CPR). People usually start breathing again on their own after a seizure.",
+        "4. Do not offer the person water or food until he or she is fully alert."
+      ]
+    },
+    "First aid for generalized tonic-clonic (grand mal) seizures": {
+      "Dos":[
+        "When most people think of a seizure, they think of a generalized tonic-clonic seizure, also called a grand mal seizure. In this type of seizure, the person may cry out, fall, shake or jerk, and become unaware of what’s going on around them. Here are things you can do to help someone who is having this type of seizure:",
+        "1. Ease the person to the floor.",
+        "2. Turn the person gently onto one side. This will help the person breathe.",
+        "3. Clear the area around the person of anything hard or sharp. This can prevent injury.",
+        "4. Put something soft and flat, like a folded jacket, under his or her head.",
+        "5. Remove eyeglasses.",
+        "6. Loosen ties or anything around the neck that may make it hard to breathe.",
+        "7. Time the seizure. Call 911 if the seizure lasts longer than 5 minutes."
       ]
     }
   }
