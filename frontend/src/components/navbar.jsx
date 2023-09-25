@@ -20,7 +20,7 @@ export default function Navbar(){
                 <a className="nav-link" href="/ContactUs">Contact Us</a>
                 </li>
                <li className="nav-item">
-                <a className="nav-link" href="/ContactUs">CPR Info</a>
+                <a className="nav-link" href="/Cpr">CPR</a>
                </li>
             </ul>
             </div>
