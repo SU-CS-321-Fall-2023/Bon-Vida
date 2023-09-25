@@ -17,8 +17,11 @@ export default function Navbar(){
                 </a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/ContactUs">Contact us</a>
+                <a className="nav-link" href="/ContactUs">Contact Us</a>
                 </li>
+               <li className="nav-item">
+                <a className="nav-link" href="/ContactUs">CPR Info</a>
+               </li>
             </ul>
             </div>
         </div>
