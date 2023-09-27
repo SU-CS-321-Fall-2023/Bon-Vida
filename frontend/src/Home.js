@@ -61,9 +61,12 @@ function Home() {
                     aria-labelledby={`heading${index}`}
                     data-bs-parent="#accordionExample"
                   >
-                    <div class="accordion-body">
+                    <div class="accordion-body" id="spacing">
                       {element.Dos.map((dosItem, dosIndex) => (
-                        <div key={dosIndex}>{dosItem}<br /></div>
+                        <div key={dosIndex}>
+                          {dosItem}
+                          <br />
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -105,7 +108,10 @@ function Home() {
                   >
                     <div class="accordion-body">
                       {element.Dos.map((dosItem, dosIndex) => (
-                        <div key={dosIndex}>{dosItem}<br /></div>
+                        <div key={dosIndex}>
+                          {dosItem}
+                          <br />
+                        </div>
                       ))}
                     </div>
                   </div>

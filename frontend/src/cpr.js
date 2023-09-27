@@ -1,15 +1,13 @@
 import React from "react";
 import Navbar from "./components/navbar";
-
-function CPR()
-{
-    return(
-        <>
-        <Navbar />
-        <div>
-          
-        </div>
-      </>
-    );
+import CprNav from "./components/cprNav";
+function CPR() {
+  return (
+    <>
+      <Navbar />
+      <CprNav />
+      <div></div>
+    </>
+  );
 }
 export default CPR;
