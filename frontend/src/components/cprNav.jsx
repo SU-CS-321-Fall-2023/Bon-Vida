@@ -3,31 +3,42 @@ import React from "react";
 export default function CprNav(){
     return(
     <>
-        <ul className="nav nav-tabs" role="tablist">
-            <li className="nav-item" role="presentation">
-                <a className="nav-link active" data-bs-toggle="tab" href="#adults" aria-selected="true" role="tab">Adults</a>
-            </li>
-            <li className="nav-item" role="presentation">
-                <a className="nav-link" data-bs-toggle="tab" href="#children" aria-selected="false" role="tab" tabindex="-1">Children</a>
-            </li>
-            <li className="nav-item" role="presentation">
-                <a className="nav-link" href="#infants" aria-selected="false" tabindex="-1" role="tab" id="infants">Infants</a>
-            </li>
-            <li className="nav-item" role="presentation">
-                <a className="nav-link" href="#AED" aria-selected="false" tabindex="-1" role="tab">AED</a>
-            </li>
+        <ul class="nav nav-tabs" role="tablist">
+         <li class="nav-item" role="presentation">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab">Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+         <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" role="tab" tabindex="-1">Profile</a>
+        </li>
+            <li class="nav-item" role="presentation">
+            <a class="nav-link disabled" href="#" aria-selected="false" tabindex="-1" role="tab">Disabled</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+         <div class="dropdown-menu">
+            <h6 class="dropdown-header">Dropdown header</h6>
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+        </li>
         </ul>
-    <div id="myTabContent" className="tab-content">
-        <div className="tab-pane fade active show" id="home" role="tabpanel">
-            <p>Adults</p>
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active show" id="home" role="tabpanel">
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
         </div>
-        <div className="tab-pane fade" id="profile" role="tabpanel">
-            <p>Children</p>
+        <div class="tab-pane fade" id="profile" role="tabpanel">
+            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
         </div>
-        <div className="tab-pane fade" id="infants">
-            <p></p>
+        <div class="tab-pane fade" id="dropdown1">
+            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
         </div>
-    </div>
+        <div class="tab-pane fade" id="dropdown2">
+            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+        </div>
+        </div>
     </>
     )
 }
