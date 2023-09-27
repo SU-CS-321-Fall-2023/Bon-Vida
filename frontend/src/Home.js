@@ -54,16 +54,20 @@ function Home() {
                     {element.injury}
                   </button>
                 </h2>
-                <div
-                  id={`collapse${index}`}
-                  class={`accordion-collapse collapse ${
-                    expandedIndex === index ? "show" : ""
-                  }`}
-                  aria-labelledby={`heading${index}`}
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">{element.Dos}</div>
-                </div>
+                {expandedIndex === index && ( // Check if it's expanded
+                  <div
+                    id={`collapse${index}`}
+                    class={`accordion-collapse collapse show`}
+                    aria-labelledby={`heading${index}`}
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      {element.Dos.map((dosItem, dosIndex) => (
+                        <div key={dosIndex}>{dosItem}<br /></div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -92,16 +96,20 @@ function Home() {
                     {element.injury}
                   </button>
                 </h2>
-                <div
-                  id={`collapse${index}`}
-                  class={`accordion-collapse collapse ${
-                    expandedIndex === index ? "show" : ""
-                  }`}
-                  aria-labelledby={`heading${index}`}
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">{element.Dos}</div>
-                </div>
+                {expandedIndex === index && ( // Check if it's expanded
+                  <div
+                    id={`collapse${index}`}
+                    class={`accordion-collapse collapse show`}
+                    aria-labelledby={`heading${index}`}
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      {element.Dos.map((dosItem, dosIndex) => (
+                        <div key={dosIndex}>{dosItem}<br /></div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
