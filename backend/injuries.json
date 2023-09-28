@@ -102,6 +102,29 @@
         "6. Loosen ties or anything around the neck that may make it hard to breathe.",
         "7. Time the seizure. Call 911 if the seizure lasts longer than 5 minutes."
       ]
+    },
+    "Low blood sugar in person with diabetes":{
+      "Dos":[
+        "1. Give them a sugar-containing beverage, such as fruit juice, milk, or a sugary soft drink that isn’t a diet drink.",
+        "2. Encourage them to sit or lie down",
+        "3. Call 9-1-1/EMS",
+        "4. If their symptoms improve, encourage them to eat."
+      ], 
+      "Donts":[
+        "If a person with diabetes is unable to sit up or swallow safely, do not give them anything to eat or drink. This could result in choking or aspiration."
+      ]
+    }, 
+    "Basic instructions for using epinephrine pens":{
+      "Dos":[
+        "1. Form a fist around the pen and remove the safety release cap",
+        "2. Place the orange end of the pen against the outer mid-thigh (with or without clothing)",
+        "3. Swing and push down hard until a click is heard or felt, and hold the pen in place for 3 seconds",
+        "4. Remove the pen and massage the injection site for 10 seconds",
+        "5. Properly dispose of the used device in a sharps container",
+        "6. Note the time of the injection",
+        "7. Seek medical care",
+        "Antihistamines, such as diphenhydramine (Benadryl®), are also important in the treatment of severe allergic reactions. Be aware that epinephrine will wear off, and the persons receiving an injection should be evaluated at an appropriate medical facility"
+      ]
     }
   }
   
