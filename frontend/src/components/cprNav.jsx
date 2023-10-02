@@ -8,6 +8,7 @@ const CprNav = () => {
     };
 
     return (
+        <div className='cpr'>
         <div>
             <ul className="nav nav-tabs" role="tablist">
                 <li className="nav-item" role="presentation">
@@ -42,7 +43,7 @@ const CprNav = () => {
     <div className={`tab-pane fade ${activeTab === 'adult-cpr' ? 'show active' : ''}`} id="adult-cpr" role="tabpanel">
         <h2>Adult CPR Guidelines</h2>
         <ol>
-            <li>Make sure the scene is safe</li>
+            <li >Make sure the scene is safe</li>
             <li>Check Responsiveness:
                 <ul>
                     <li>Tap victim’s Shoulder and shout, “Are you Ok?”</li>
@@ -234,6 +235,7 @@ const CprNav = () => {
 </div>
 
             </div>
+        </div>
         </div>
     );
 };
