@@ -42,6 +42,7 @@ const CprNav = () => {
             <div id="myTabContent" className="tab-content">
     <div className={`tab-pane fade ${activeTab === 'adult-cpr' ? 'show active' : ''}`} id="adult-cpr" role="tabpanel">
         <h2>Adult CPR Guidelines</h2>
+        <img src='Images/CPR-Adult.jpg' alt='Adult CPR' style={{ float: 'left', marginRight: '20px' }} />
         <ol>
             <li >Make sure the scene is safe</li>
             <li>Check Responsiveness:
