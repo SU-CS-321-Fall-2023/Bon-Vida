@@ -45,7 +45,7 @@ const CprNav = () => {
             <div id="myTabContent" className="tab-content">
     <div className={`tab-pane fade ${activeTab === 'adult-cpr' ? 'show active' : ''}`} id="adult-cpr" role="tabpanel">
         <h2>Adult CPR Guidelines</h2>
-        <img src={Adults} alt='Adult CPR' style={{ float: 'right', marginLeft: '5px' }} />
+        <img  className='images' src={Adults} alt='Adult CPR' style={{ float: 'right', marginLeft: '5px' }} />
         <ol>
             <li >Make sure the scene is safe</li>
             <li>Check Responsiveness:
@@ -109,7 +109,7 @@ const CprNav = () => {
     </div>
     <div className={`tab-pane fade ${activeTab === 'infant-cpr' ? 'show active' : ''}`} id="infant-cpr" role="tabpanel">
     <h2>Infant CPR Guidelines</h2>
-    <img src={Infant} alt='Infant CPR' style={{ float: 'right', marginLeft: '5px' }} />
+    <img className='images' src={Infant} alt='Infant CPR' style={{ float: 'right', marginLeft: '5px' }} />
     <ol>
         <li>Make sure the scene is safe</li>
         <li>Check Responsiveness: Tap infant’s heel of foot and shout, “Are you Ok?”</li>
@@ -175,7 +175,7 @@ const CprNav = () => {
 
 <div className={`tab-pane fade ${activeTab === 'child-cpr' ? 'show active' : ''}`} id="child-cpr" role="tabpanel">
     <h2>Child CPR Guidelines</h2>
-    <img src={Child} alt='Child CPR' style={{ float: 'right', marginLeft: '5px' }} />
+    <img className='images' src={Child} alt='Child CPR' style={{ float: 'right', marginLeft: '5px' }} />
     <ol>
         <li>Make sure the scene is safe</li>
         <li>Check Responsiveness: Tap child’s Shoulder and shout, “Are you Ok?”</li>

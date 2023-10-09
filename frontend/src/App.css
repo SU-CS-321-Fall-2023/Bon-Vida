@@ -34,3 +34,8 @@
   max-width: 50%;
 }
 
+.images{
+  position: Absolute;
+  padding-left: 800px;
+}
+
