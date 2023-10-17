@@ -71,7 +71,7 @@ function App() {
       setAcknowledged(true);
     }
   }, []);
-
+  console.log("Test")
   return (
     <div className="App">
       {!acknowledged ? (
