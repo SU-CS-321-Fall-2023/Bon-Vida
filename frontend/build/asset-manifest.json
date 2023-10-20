@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aad1b7e7.css",
+    "main.js": "/static/js/main.d31d6b11.js",
+    "static/js/787.b7932675.chunk.js": "/static/js/787.b7932675.chunk.js",
+    "static/media/CPR-Adult.jpg": "/static/media/CPR-Adult.8abb694f80f4dec3d542.jpg",
+    "static/media/CPR-Child.jpg": "/static/media/CPR-Child.012a7a67d45db50fa7f7.jpg",
+    "static/media/CPR-Infant.jpg": "/static/media/CPR-Infant.60f595c0c8053957fdf0.jpg",
+    "index.html": "/index.html",
+    "main.aad1b7e7.css.map": "/static/css/main.aad1b7e7.css.map",
+    "main.d31d6b11.js.map": "/static/js/main.d31d6b11.js.map",
+    "787.b7932675.chunk.js.map": "/static/js/787.b7932675.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aad1b7e7.css",
+    "static/js/main.d31d6b11.js"
+  ]
+}
