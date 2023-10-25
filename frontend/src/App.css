@@ -39,3 +39,16 @@
   padding-left: 800px;
 }
 
+#chatButton{
+  margin-top: 17%;
+  margin-left: 85%;
+}
+
+#chatPrompt{
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  border-width: 2px; 
+  border-style: solid; 
+  border-color: black; 
+}

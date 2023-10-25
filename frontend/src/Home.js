@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import SearchBar from "./components/searchbar";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // currently adding functionality that will allow for search filtering
 function Home() {
@@ -121,6 +122,11 @@ function Home() {
           ))}
         </div>
       )}
+      <Link to={"/Chat"}>
+        <button type="button" class="btn btn-primary btn-lg" id="chatButton">
+          Chat with Abraam?
+        </button>
+      </Link>
     </>
   );
 }

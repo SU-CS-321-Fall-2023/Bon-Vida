@@ -3,6 +3,7 @@ import "./bootstrap.min.css";
 import Home from "./Home";
 import Contact from "./contactUs";
 import About from "./about";
+import Chat from "./chat";
 import CPR from "./cpr";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -71,7 +72,7 @@ function App() {
       setAcknowledged(true);
     }
   }, []);
-  console.log("Test")
+  console.log("Test");
   return (
     <div className="App">
       {!acknowledged ? (
@@ -83,6 +84,7 @@ function App() {
             <Route path="/ContactUs" element={<Contact />} />
             <Route path="/About" element={<About />} />
             <Route path="/Cpr" element={<CPR />} />
+            <Route path="/Chat" element={<Chat />} />
           </Routes>
         </BrowserRouter>
       )}
