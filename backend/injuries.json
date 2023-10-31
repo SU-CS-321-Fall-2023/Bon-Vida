@@ -101,6 +101,9 @@
         "5. Remove eyeglasses.",
         "6. Loosen ties or anything around the neck that may make it hard to breathe.",
         "7. Time the seizure. Call 911 if the seizure lasts longer than 5 minutes."
+      ],
+      "Donts": [
+        
       ]
     },
     "Low blood sugar in person with diabetes":{
@@ -124,6 +127,9 @@
         "6. Note the time of the injection",
         "7. Seek medical care",
         "Antihistamines, such as diphenhydramine (Benadryl®), are also important in the treatment of severe allergic reactions. Be aware that epinephrine will wear off, and the persons receiving an injection should be evaluated at an appropriate medical facility"
+      ],
+      "Donts": [
+        
       ]
     }
   }

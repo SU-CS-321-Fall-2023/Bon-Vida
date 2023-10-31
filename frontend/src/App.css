@@ -51,4 +51,19 @@
   border-width: 2px; 
   border-style: solid; 
   border-color: black; 
+  font-family: 'Times New Roman', Times, serif;
 }
+
+#container{
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 3%;
+  padding: 2%;
+}
+
+#Answer{
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;  
+  line-height: 1.5;
+}
+

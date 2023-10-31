@@ -17,6 +17,7 @@ function Home() {
       .catch((err) => console.log(err));
   }, []);
 
+  console.log(injuries);
   const [filteredElements, setFilteredElements] = useState([]);
 
   const handleSearch = (query) => {

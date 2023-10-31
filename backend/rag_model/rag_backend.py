@@ -2,6 +2,10 @@ import json
 from transformers import RagTokenizer, RagSequenceForGeneration
 import torch
 import Levenshtein
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
 
 # Load the RAG model
 tokenizer = RagTokenizer.from_pretrained("facebook/rag-sequence-nq")
@@ -47,35 +51,34 @@ def process_injury_or_illness(name):
     return response
 
 
+@app.route('/answer', methods=['GET'])
+def get_answer():
+    data = request.args.get('data')
+    return process_injury_or_illness(data)
+
+
+@app.route('/injuries', methods=['GET'])
+def get_injuries():
+    try:
+        # Read the JSON data from the file
+        with open("../Bon-Vida/backend/injuries.json", 'r') as file:
+            injuries_data = json.load(file)
+
+        # Create a list of dictionaries where each dictionary contains Dos and Don'ts for an injury
+        injuries_list = [
+            {
+                'injury': injury,
+                'Dos': injuries_data[injury]['Dos'],
+                'Donts': injuries_data[injury]['Donts']
+            }
+            for injury in injuries_data
+        ]
+
+        return jsonify(injuries_list)
+    except Exception as error:
+        print("Error reading injuries data:", error)
+        return jsonify([])
+
+
 if __name__ == "__main__":
-    while True:
-        injury_or_illness_name = input(
-            "Please enter the name of the injury or illness (or type 'exit' to quit): ")
-
-        if injury_or_illness_name.lower() in ['exit', 'quit']:
-            print("Exiting program. Goodbye!")
-            break
-
-        print(process_injury_or_illness(injury_or_illness_name))
-
-    # if name not in data:
-        # return "The specified injury or illness is not found in the dataset."
-    # dos = data[name].get("Dos", [])
-    # donts = data[name].get("Donts", [])
-    # response = ""
-
-    # if dos:
-    #    response += "Do's:\n" + "\n".join(dos) + "\n\n"
-    # if donts:
-    #    response += "Don'ts:\n" + "\n".join(donts) + "\n\n"
-   # return response
-
-# if __name__ == "__main__":
-    # while True:
-        # injury_or_illness_name = input("Please enter the name of the injury or illness (or type 'exit' to quit): ")
-
-        # if injury_or_illness_name.lower() in ['exit', 'quit']:
-        #  print("Exiting program. Goodbye!")
-        #  break
-
-       # print(process_injury_or_illness(injury_or_illness_name))
+    app.run(host='0.0.0.0', port=8080)
