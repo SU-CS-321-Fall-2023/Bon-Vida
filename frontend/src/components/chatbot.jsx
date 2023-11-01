@@ -5,10 +5,11 @@ import axios from "axios";
 
 export default function Chatbot(){
     const [showAnswer, setShowAnswer] = useState(false)
-    const [answer, setAnswer] = useState();
+    const [answer, setAnswer] = useState("");
     const [question, setQuestion] = useState();
 
     const handleEntry = (event)=>{
+        setShowAnswer(false);
         if (event.key === 'Enter') {
             axios
                 .get(`/answer?data=${question}`)
@@ -26,6 +27,7 @@ export default function Chatbot(){
           }
 
     }
+    console.log(answer)
 
     const handleInputChange = (event) => {
         setQuestion(event.target.value);
