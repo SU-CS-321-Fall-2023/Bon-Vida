@@ -125,7 +125,7 @@ function Home() {
       )}
       <Link to={"/Chat"}>
         <button type="button" class="btn btn-primary btn-lg" id="chatButton">
-          Chat with Abraam?
+          Chat with JAVC?
         </button>
       </Link>
     </>
