@@ -12,7 +12,7 @@ tokenizer = RagTokenizer.from_pretrained("facebook/rag-sequence-nq")
 model = RagSequenceForGeneration.from_pretrained("facebook/rag-sequence-nq")
 
 # Load the JSON data
-with open("../Bon-Vida/backend/injuries.json", "r") as f:
+with open("../Bon-Vida/backend/injuries.json", "r", encoding='utf-8') as f:
     data = json.load(f)
 
 
