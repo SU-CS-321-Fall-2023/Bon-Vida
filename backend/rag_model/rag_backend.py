@@ -5,7 +5,7 @@ import faiss
 import torch
 
 # Load the JSON data
-with open('/Users/vakulnath/Documents/GitHub/Bon-Vida/Bon-Vida/backend/injuries.json', 'r') as file:
+with open('../Bon-Vida/backend/injuries_rag.json', 'r') as file:
     data = json.load(file)
 
 formatted_data = []
@@ -42,10 +42,10 @@ index = faiss.IndexFlatIP(dim)
 index.add(embeddings)
 
 # Save the index
-faiss.write_index(index, "/Users/vakulnath/Documents/GitHub/Bon-Vida/Bon-Vida/backend/index2.faiss")
+faiss.write_index(index, "../Bon-Vida/backend/rag_model/index.faiss")
 
 # Load the FAISS index
-index = faiss.read_index("/Users/vakulnath/Documents/GitHub/Bon-Vida/Bon-Vida/backend/index2.faiss")
+index = faiss.read_index("../Bon-Vida/backend/rag_model/index.faiss")
 
 from transformers import DPRQuestionEncoder, DPRQuestionEncoderTokenizer
 
