@@ -1,0 +1,18 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "data": {
+      "text": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "title": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

@@ -64,19 +64,38 @@ def query_index(question, question_tokenizer, question_model, index, documents, 
 
     # Fetch the most relevant document(s)
     relevant_docs = [documents[i] for i in I[0]]
-    return relevant_docs
+    return relevant_docs    
+from transformers import BartForConditionalGeneration, BartTokenizer
 
-def get_response(question, question_tokenizer, question_model, index, documents):
+# Initialize BART model and tokenizer
+bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
+bart_tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
+
+def generate_answer(context, bart_model, bart_tokenizer):
+    # Tokenize the input context (retrieved document)
+    inputs = bart_tokenizer.encode("summarize: " + context, return_tensors='pt', max_length=1024, truncation=True)
+    
+    # Generate a response
+    summary_ids = bart_model.generate(inputs, max_length=150, min_length=40, length_penalty=2.0, num_beams=4, early_stopping=True)
+    return bart_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
+def get_response(question, question_tokenizer, question_model, index, documents, bart_model, bart_tokenizer):
     relevant_docs = query_index(question, question_tokenizer, question_model, index, documents)
-    return relevant_docs[0] if relevant_docs else "No relevant information found."
+    if len(relevant_docs) > 0:
+        content = relevant_docs[0].split("\nContext: ")[1]  # Extract the context
+        answer = generate_answer(content, bart_model, bart_tokenizer)  # Generate response using BART
+        return answer
+    else:
+        return "No relevant information found."
 
+# Main loop
 if __name__ == "__main__":
     while True:
         user_query = input("Please enter your question (or type 'exit' to quit): ")
         if user_query.lower() in ['exit', 'quit']:
             print("Thank you for using Bon Vida. Goodbye!")
             break
-        response = get_response(user_query, question_tokenizer, question_model, index, formatted_data)
+        response = get_response(user_query, question_tokenizer, question_model, index, formatted_data, bart_model, bart_tokenizer)
         print(response)
 
 
