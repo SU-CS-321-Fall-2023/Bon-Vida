@@ -1,12 +1,19 @@
 import React, { useState, useRef } from "react";
-import { View, TextInput, Text, StyleSheet, Animated } from "react-native";
+import {
+  View,
+  TextInput,
+  Text,
+  StyleSheet,
+  Animated,
+  ActivityIndicator,
+} from "react-native";
 import axios from "axios";
 
 export default function Chatbot() {
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState(null);
   const [question, setQuestion] = useState("");
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const [loading, setLoading] = useState(false);
 
   const fadeIn = () => {
     Animated.timing(fadeAnim, {
@@ -17,7 +24,8 @@ export default function Chatbot() {
   };
 
   const handleEntry = async () => {
-    setShowAnswer(false);
+    setAnswer(null);
+    setLoading(true);
 
     try {
       const response = await axios.get(
@@ -29,9 +37,9 @@ export default function Chatbot() {
     } catch (error) {
       // Handle any errors
       console.error(error);
+    } finally {
+      setLoading(false);
     }
-
-    setShowAnswer(true);
   };
 
   const handleInputChange = (text) => {
@@ -46,8 +54,14 @@ export default function Chatbot() {
         onChangeText={handleInputChange}
         onSubmitEditing={handleEntry}
       />
+      {loading && (
+        <View>
+          <Text>Generating answer...</Text>
+          <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+      )}
 
-      {showAnswer ? (
+      {answer ? (
         <Animated.View style={{ ...styles.answerContainer, opacity: fadeAnim }}>
           <Text style={styles.answerText}>{answer}</Text>
         </Animated.View>
