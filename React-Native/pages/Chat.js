@@ -6,6 +6,8 @@ import {
   StyleSheet,
   Animated,
   ActivityIndicator,
+  TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import axios from "axios";
 
@@ -14,6 +16,8 @@ export default function Chatbot() {
   const [question, setQuestion] = useState("");
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const [loading, setLoading] = useState(false);
+  const [fullAnswer, setFullAnswer] = useState(null);
+  const [showFullAnswer, setShowFullAnswer] = useState(false);
 
   const fadeIn = () => {
     Animated.timing(fadeAnim, {
@@ -26,13 +30,16 @@ export default function Chatbot() {
   const handleEntry = async () => {
     setAnswer(null);
     setLoading(true);
+    setFullAnswer(null);
 
     try {
       const response = await axios.get(
         `http://localhost:8080/answer?data=${question}`
       );
+      const [receivedAnswer, receivedFullAnswer] = response.data;
       // Handle the response from the Flask back end
-      setAnswer(response.data);
+      setAnswer(receivedAnswer);
+      setFullAnswer(receivedFullAnswer);
       fadeIn(); // Trigger fade in when the answer is received
     } catch (error) {
       // Handle any errors
@@ -44,6 +51,10 @@ export default function Chatbot() {
 
   const handleInputChange = (text) => {
     setQuestion(text);
+  };
+
+  const handlePress = () => {
+    setShowFullAnswer(!showFullAnswer);
   };
 
   return (
@@ -64,9 +75,21 @@ export default function Chatbot() {
       {answer ? (
         <Animated.View style={{ ...styles.answerContainer, opacity: fadeAnim }}>
           <Text style={styles.answerText}>{answer}</Text>
+          <TouchableOpacity onPress={handlePress} style={styles.expandButton}>
+            <Text style={styles.expandButtonText}>
+              {showFullAnswer ? "Collapse ⬆️" : "Expand ⬇️"}
+            </Text>
+          </TouchableOpacity>
         </Animated.View>
       ) : (
-        <View></View>
+        <View />
+      )}
+      {showFullAnswer ? (
+        <Animated.View style={{ ...styles.answerContainer, opacity: fadeAnim }}>
+          <Text style={styles.answerText}>{fullAnswer}</Text>
+        </Animated.View>
+      ) : (
+        <View />
       )}
     </View>
   );
@@ -95,5 +118,15 @@ const styles = StyleSheet.create({
   },
   answerText: {
     fontSize: 16,
+  },
+  expandButton: {
+    marginTop: 10,
+    padding: 5,
+    backgroundColor: "#3498db",
+    borderRadius: 5,
+    alignItems: "center",
+  },
+  expandButtonText: {
+    color: "#fff",
   },
 });

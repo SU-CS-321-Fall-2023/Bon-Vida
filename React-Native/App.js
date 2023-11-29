@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import Home from "./pages/Home";
+import CPR from "./pages/cpr";
 import { NavigationContainer } from "@react-navigation/native";
-import PackageList from "./pages/packagesList";
-import Package from "./pages/package";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Chat from "./pages/Chat";
 import {
   SafeAreaView,
   Text,
@@ -10,10 +11,8 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import Chatbot from "./pages/Chat";
-import CprNav from "./pages/cpr";
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   const [agree, setAgree] = useState(false);
@@ -66,12 +65,11 @@ const App = () => {
           </ScrollView>
         </SafeAreaView>
       ) : (
-        <Stack.Navigator initialRouteName="PackageList">
-          <Stack.Screen name="PackageList" component={PackageList} />
-          <Stack.Screen name="Package" component={Package} />
-          <Stack.Screen name="Chat" component={Chatbot} />
-          <Stack.Screen name="CPR" component={CprNav} />
-        </Stack.Navigator>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen name="CPR" component={CPR} />
+          <Tab.Screen name="Chat" component={Chat} />
+        </Tab.Navigator>
       )}
     </NavigationContainer>
   );

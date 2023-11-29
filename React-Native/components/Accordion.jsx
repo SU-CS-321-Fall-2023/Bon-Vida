@@ -10,6 +10,7 @@ const AccordionItem = ({ title, data }) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      
       <TouchableOpacity onPress={handlePress} style={styles.header}>
         <Text style={styles.title}>{title}</Text>
       </TouchableOpacity>
@@ -30,7 +31,10 @@ const AccordionItem = ({ title, data }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 30,
+    marginBottom: 20,
+    marginTop:20,
+    marginLeft: 20,
+    marginRight:20
   },
   header: {
     backgroundColor: '#3498db',
