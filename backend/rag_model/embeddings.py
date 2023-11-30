@@ -5,7 +5,7 @@ import faiss
 import torch
 
 # Load the JSON data
-with open('/Users/vakulnath/Documents/GitHub/Bon-Vida/Bon-Vida/backend/injuries.json', 'r') as file:
+with open('/Users/vakulnath/Documents/GitHub/Bon-Vida/Bon-Vida/backend/injuries_rag.json', 'r') as file:
     data = json.load(file)
 
 formatted_data = []
