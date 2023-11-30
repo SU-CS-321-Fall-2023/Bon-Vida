@@ -120,8 +120,12 @@ def get_response(question, question_tokenizer, question_model, index, documents,
 def get_answer():
 
     data = request.args.get('data')
+    answer = get_response(data, question_tokenizer, question_model,
+                          index, formatted_data, bart_model, bart_tokenizer)
+    fullAnswer = query_index(data, question_tokenizer,
+                             question_model, index, formatted_data, top_k=1)
 
-    return get_response(data, question_tokenizer, question_model, index, formatted_data, bart_model, bart_tokenizer)
+    return [answer, fullAnswer]
 
 
 @app.route('/injuries', methods=['GET'])
