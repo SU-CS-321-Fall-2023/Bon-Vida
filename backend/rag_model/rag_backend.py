@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 # Load the JSON data
-with open('../Bon-Vida/backend/injuries.json', 'r') as file:
+with open('../Bon-Vida/backend/injuries_rag.json', 'r') as file:
     data = json.load(file)
 
 formatted_data = []
