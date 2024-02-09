@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 # Load the JSON data
-with open('../Bon-Vida/backend/injuries_rag.json', 'r') as file:
+with open('/Users/christopherjasinski/Desktop/CS /Bon-Vida/backend/injuries_rag.json', 'r') as file:
     data = json.load(file)
 
 formatted_data = []
@@ -57,11 +57,11 @@ index.add(embeddings)
 
 # Save the index
 faiss.write_index(
-    index, "../Bon-Vida/backend/index2.faiss")
+    index, "/Users/christopherjasinski/Desktop/CS /Bon-Vida/backend/index2.faiss")
 
 # Load the FAISS index
 index = faiss.read_index(
-    "../Bon-Vida/backend/index2.faiss")
+    "/Users/christopherjasinski/Desktop/CS /Bon-Vida/backend/index2.faiss")
 
 
 # Initialize DPR Question Encoder
@@ -132,7 +132,7 @@ def get_answer():
 def get_injuries():
     try:
         # Read the JSON data from the file
-        with open("../Bon-Vida/backend/injuries.json", 'r') as file:
+        with open("/Users/christopherjasinski/Desktop/CS /Bon-Vida/backend/injuries.json", 'r') as file:
             injuries_data = json.load(file)
             injuries_list = [
                 {
